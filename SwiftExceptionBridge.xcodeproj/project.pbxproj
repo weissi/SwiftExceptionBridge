@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8FC06C121A7932ED0088DCAC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC06C111A7932ED0088DCAC /* main.swift */; };
-		8FC06C1B1A7933260088DCAC /* JFWSwiftExceptionBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC06C1A1A7933260088DCAC /* JFWSwiftExceptionBridge.m */; };
+		8FC06C1B1A7933260088DCAC /* JFWSwiftExceptionBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC06C1A1A7933260088DCAC /* JFWSwiftExceptionBridge.m */; settings = {COMPILER_FLAGS = "-fobjc-arc-exceptions"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
