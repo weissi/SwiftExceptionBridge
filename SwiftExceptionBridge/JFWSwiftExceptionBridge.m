@@ -26,9 +26,10 @@
 
 - (instancetype)initWithResult:(id)result exception:(NSException *)exception
 {
-    NSAssert(((result && !exception) || (!result && exception)), @"illegal values passed");
+    NSAssert(!exception || !result, @"illegal values passed: both result (%@) and exception (%@) set",
+             result, exception);
     if ((self = [super init])) {
-        self->_success = !!result;
+        self->_success = !exception;
         self->_result = result;
         self->_exception = exception;
     }
