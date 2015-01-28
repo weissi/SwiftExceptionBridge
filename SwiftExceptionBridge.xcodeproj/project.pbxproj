@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8FC06C121A7932ED0088DCAC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC06C111A7932ED0088DCAC /* main.swift */; };
+		8FC06C1B1A7933260088DCAC /* JFWSwiftExceptionBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC06C1A1A7933260088DCAC /* JFWSwiftExceptionBridge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,9 @@
 /* Begin PBXFileReference section */
 		8FC06C0E1A7932ED0088DCAC /* SwiftExceptionBridge */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftExceptionBridge; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FC06C111A7932ED0088DCAC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		8FC06C181A7933250088DCAC /* SwiftExceptionBridge-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftExceptionBridge-Bridging-Header.h"; sourceTree = "<group>"; };
+		8FC06C191A7933260088DCAC /* JFWSwiftExceptionBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFWSwiftExceptionBridge.h; sourceTree = "<group>"; };
+		8FC06C1A1A7933260088DCAC /* JFWSwiftExceptionBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFWSwiftExceptionBridge.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,9 @@
 			isa = PBXGroup;
 			children = (
 				8FC06C111A7932ED0088DCAC /* main.swift */,
+				8FC06C191A7933260088DCAC /* JFWSwiftExceptionBridge.h */,
+				8FC06C1A1A7933260088DCAC /* JFWSwiftExceptionBridge.m */,
+				8FC06C181A7933250088DCAC /* SwiftExceptionBridge-Bridging-Header.h */,
 			);
 			path = SwiftExceptionBridge;
 			sourceTree = "<group>";
@@ -118,6 +125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FC06C1B1A7933260088DCAC /* JFWSwiftExceptionBridge.m in Sources */,
 				8FC06C121A7932ED0088DCAC /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,14 +211,21 @@
 		8FC06C161A7932ED0088DCAC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftExceptionBridge/SwiftExceptionBridge-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		8FC06C171A7932ED0088DCAC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftExceptionBridge/SwiftExceptionBridge-Bridging-Header.h";
 			};
 			name = Release;
 		};
