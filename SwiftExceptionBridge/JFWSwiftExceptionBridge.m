@@ -62,6 +62,7 @@
         (tryBlock ?: ^() {})();
     }
     @catch (NSException *exception) {
+        NSAssert(exception, @"the impossible happened: nil exception caught");
         (exceptBlock ?: ^(NSException *e) {})(exception);
     }
     @finally {
@@ -83,6 +84,7 @@
         roe = [[JFWResultOrException alloc] initWithResult:result exception:nil];
     }
                   except:^(NSException *ex) {
+                      NSAssert(ex, @"the impossible happened: nil exception");
                       roe = [[JFWResultOrException alloc] initWithResult:nil exception:ex];
 
                   }];
